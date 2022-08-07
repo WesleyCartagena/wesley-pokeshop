@@ -1,8 +1,9 @@
 .nav-bar {
-    background: red;
+    background: #2a75bb;
     height: 20px;
     width: 100%;
     position: absolute;
+    align-items: center;
     top: 0;
     z-index: 3;
     min-height: 60px;
@@ -14,113 +15,17 @@
       #home-link{
         padding-right: 25px;
         font-size: 35px;
-      }
-      #about-link{
-        padding-right: 25px;
 
-        font-size: 35px;
       }
-      #contact-link{
-        padding-right: 25px;
-
-        font-size: 35px;
-      }
-      #project-link{
-        padding-right: 25px;
-
-        font-size: 35px;
-      }
-      a {
-        font-size: 22px;
-        color: #4d4d4e;
-        display: inline-block;
-        line-height: 51px;
-        height: 51px;
-        position: relative;
-        text-decoration: none;
-    
-        i {
-          transition: all 0.3s ease-out;
-        }
-    
-        &:hover {
-          color: #32CD30;
-    
-          svg {
-            opacity: 0;
-          }
-    
-          &:after {
-            opacity: 1;
-          }
-        }
-    
-        &:after {
-          content: '';
-          font-size: 9px;
-          letter-spacing: 2px;
-          position: absolute;
-          bottom: 0;
-          display: block;
-          width: 100%;
-          opacity: 0;
-          text-align: left;
-          justify-content: left;
-          -webkit-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
-        }
-    
-      }
-      #home-link {
-        &:after {
-          content: 'HOME';
-          left: 10%;
-        }
-      }   
-      #about-link {
-        &:after {
-          content: 'ABOUT';
-          right: 5%;
-        }
-      }
-    
-      #contact-link {
-        &:after {
-          content: 'CONTACT';
-          right: 15%;
-        }
-      }
-      #project-link {
-        &:after {
-          content: 'PROJECTS';
-          right: 20%;
-        }
-      }
-      a.active {
-        svg {
-          color: #32CD30;
-        }
-      }
-    }
-    ul#horizontal-list {
-      list-style: none;
-      text-align: right;
-      position:absolute;
-      top: 0;
-      right: 0;
-
-    }
-    ul#horizontal-list li{
-      display: inline;
-      a{
+      #search-link{
         padding-right: 25px;
         font-size: 35px;
-        line-height: 16px;
-        color: #4d4d4e;
-        &:hover svg{
-          color: #32CD30;
-        }
       }
+      #cart-link{
+        padding-right: 25px;
+        font-size: 35px;
+      }
+
 
 
     }

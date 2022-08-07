@@ -1,0 +1,13 @@
+.container.search-page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    border: solid red;
+}
