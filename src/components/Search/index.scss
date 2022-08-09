@@ -1,6 +1,6 @@
 .container.search-page{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: center;
@@ -10,4 +10,66 @@
     top: 100px;
     width: 100%;
     border: solid red;
+    max-width: 600px;
+    .search-bar {
+        position: relative;
+        text-align: center;
+        padding: 5rem;
+        input{
+            padding: .7rem 1.5rem;
+            font-size: 2rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255, 0.8);
+            background: white;
+            color: Black;
+        }
+        button{
+            padding: .7rem 5rem;
+            font-size: 2rem;
+            border-radius: 25px;
+        }
+      }
+    .featured-pokemon{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        color: black;
+        margin:50px auto;
+        max-width: 2000px;
+        .pokemon{
+            box-shadow: 3px 6px rgba(0,0,0,0.2);
+            background-color: #ffcb05;
+            border: solid black;
+            padding: 100px;
+            border-radius: 50px;
+            min-width: 8rem;
+            margin: 5px;
+            color: black;
+            img{
+                width: 200px;
+                border-radius: 100%;
+
+            }
+            h1{
+                position: relative;
+                bottom: 5%;
+                font-size: 30px;
+                text-transform: capitalize;
+            }
+            p{
+                position: relative;
+                bottom: 5%;
+              font-size: 20px;   
+              text-transform: capitalize;     
+            }
+            button{
+                position: relative;
+                bottom: 5%;
+                font-size: 35px;
+            }
+        }
+    }
 }

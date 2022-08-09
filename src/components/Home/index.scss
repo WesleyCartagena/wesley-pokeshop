@@ -15,9 +15,15 @@
         padding: 75px;
         text-align: center;
         background: white;
-        color: black;
+        color: red;
         font-size: 30px;
         width: 100%;
+        background-image: url("pokeBanner.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position:center ;
+
+
     }
     .title{
         font-size: 38PX;
@@ -51,4 +57,13 @@
         }
     }
 
+}
+@media screen and (min-width: 601px){
+    .container.home-page{
+        .banner{
+
+            background-image: url("pokebanner3.png");
+        }
+    }
+    
 }

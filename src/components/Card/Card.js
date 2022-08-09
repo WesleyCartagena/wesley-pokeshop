@@ -16,8 +16,9 @@ function Card({ pokemon }) {
                     )
                 })
             }
-                <p >Weight: {pokemon.weight}</p>
-                <p>Height: {pokemon.height}</p>
+                <p >HP: {pokemon.stats[0].base_stat}</p>
+                <p >Attack: {pokemon.stats[1].base_stat}</p>
+                <p >Defense: {pokemon.stats[2].base_stat}</p>
                 <p >Ability: {pokemon.abilities[0].ability.name}</p>
                 <button>POKEBUY</button>
         </div>

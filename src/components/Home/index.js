@@ -1,16 +1,16 @@
 import './index.scss';
 import React, {useState, useEffect} from 'react'
-import { getPokemon, getAllPokemon } from '../Services/pokemon';
+import { getPokemon, getAllPokemon } from '../Helpers/pokemon';
 import Card from '../../components/Card';
 import axios from 'axios'
 
 function Home() {
-    const [pokemonData, setPokemonData] = useState([])
+    const [pokeData, setPokemonData] = useState([])
     const [loading, setLoading] = useState(true);
-    const initialURL = 'https://pokeapi.co/api/v2/pokemon'
+    const url = 'https://pokeapi.co/api/v2/pokemon'
     useEffect(() => {
         async function fetchData() {
-          let response = await getAllPokemon(initialURL)
+          let response = await getAllPokemon(url)
           await loadPokemon(response.results);
           setLoading(false);
           console.log(response.results)
@@ -19,12 +19,12 @@ function Home() {
       }, [])
     
       const loadPokemon = async (data) => {
-        let _pokemonData = await Promise.all(data.map(async pokemon => {
+        let poke_Data = await Promise.all(data.map(async pokemon => {
           let pokemonRecord = await getPokemon(pokemon)
           return pokemonRecord
         }))
-        setPokemonData(_pokemonData);
-        console.log(_pokemonData)
+        setPokemonData(poke_Data);
+        console.log(poke_Data)
       }
     return(
         <section class="container home-page">
@@ -34,7 +34,7 @@ function Home() {
             </div>
             <h1 class="title">FEATURED POKEMON</h1>
              <div className="featured-pokemon">
-              {pokemonData.map((pokemon, i) => {
+              {pokeData.map((pokemon, i) => {
                 return <Card key={i} pokemon={pokemon} />
               })}
             </div>
