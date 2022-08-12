@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wesley-pokeshop/static/css/main.ed655689.css",
+    "main.js": "/wesley-pokeshop/static/js/main.8898d0f8.js",
+    "static/js/787.68221884.chunk.js": "/wesley-pokeshop/static/js/787.68221884.chunk.js",
+    "index.html": "/wesley-pokeshop/index.html",
+    "main.ed655689.css.map": "/wesley-pokeshop/static/css/main.ed655689.css.map",
+    "main.8898d0f8.js.map": "/wesley-pokeshop/static/js/main.8898d0f8.js.map",
+    "787.68221884.chunk.js.map": "/wesley-pokeshop/static/js/787.68221884.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed655689.css",
+    "static/js/main.8898d0f8.js"
+  ]
+}
