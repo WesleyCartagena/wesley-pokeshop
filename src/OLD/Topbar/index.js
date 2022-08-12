@@ -1,7 +1,8 @@
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome,faMagnifyingGlass,faCartShopping} from '@fortawesome/free-solid-svg-icons'
-import { Link, NavLink } from 'react-router-dom'
+
+
 
 
 
@@ -10,15 +11,16 @@ const Topbar = () => {
         <div className='nav-bar'>
 
             <nav>
-                <NavLink class="nav-links"  exact="true" activeclassname="active" id="home-link" to="/">
+                <a href="#" class="nav-links"  exact="true" activeclassname="active" id="home-link" to="/">
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e"/>
-                </NavLink>
-                <NavLink class="nav-links"  exact="true" activeclassname="active" id="search-link" to="search">
+                </a>
+                <a href="#" class="nav-links"  exact="true" activeclassname="active" id="search-link" >
                     <FontAwesomeIcon icon={faMagnifyingGlass} color="#4d4d4e"/>
-                </NavLink>
-                <NavLink class="nav-links"  exact="true" activeclassname="active" id="cart-link" to="">
+                </a>
+                <a  href="#" class="nav-links"  exact="true" activeclassname="active" id="cart-link" >
                     <FontAwesomeIcon icon={faCartShopping} color="#4d4d4e"/>
-                </NavLink>
+                </a>
+
             </nav>
 
         </div>

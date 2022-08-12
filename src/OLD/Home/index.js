@@ -2,18 +2,14 @@ import './index.scss';
 import React, {useState, useEffect} from 'react'
 import { getPokemon, getAllPokemon } from '../Helpers/pokemon';
 import Card from '../../components/Card';
-import axios from 'axios'
 
 function Home() {
     const [pokeData, setPokemonData] = useState([])
-    const [loading, setLoading] = useState(true);
     const url = 'https://pokeapi.co/api/v2/pokemon'
     useEffect(() => {
         async function fetchData() {
           let response = await getAllPokemon(url)
           await loadPokemon(response.results);
-          setLoading(false);
-          console.log(response.results)
         }
         fetchData();
       }, [])
@@ -25,6 +21,7 @@ function Home() {
         }))
         setPokemonData(poke_Data);
         console.log(poke_Data)
+        console.log("PokeData")
       }
     return(
         <section class="container home-page">

@@ -1,24 +1,21 @@
 import './index.scss';
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import axios from 'axios'
-import typeColors from '../Card/typeColors';
 
 
 
-function Search(){
-    const[pokeData,setData] = useState([])
+function Search({handleClickSearch}){
+    const[poke__Data,setData] = useState([])
     const[pokemon,setPokemon] = useState('')
-
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
     
     const searchPokemon = () =>{
         axios.get(url).then((response) => {
             setData(response.data)
-            console.log(response.data)
+            //console.log(response.data)
           })
           setPokemon('')
     }
-  
     const typeColors = {
         bug: '#729f3f',
         dragon: '#53a4cf',
@@ -49,12 +46,12 @@ function Search(){
                 type="text" />
                 <button onClick={searchPokemon}>Search Pokemon</button>
             </div>
-            {pokeData.name ?<div className="featured-pokemon">
+            {poke__Data.name ?<div className="featured-pokemon">
                 <div className="pokemon">
-                    {pokeData.sprites ? <img src={pokeData.sprites.front_default} alt="pokemon" id="img"></img>:null}
-                    <h1>{pokeData.name}</h1>
+                    {poke__Data.sprites ? <img src={poke__Data.sprites.front_default} alt="pokemon" id="img"></img>:null}
+                    <h1>{poke__Data.name}</h1>
                     {
-                        pokeData.types.map(type => {
+                        poke__Data.types.map(type => {
                         return (
                             <p  style={{ backgroundColor: typeColors[type.type.name] }}>
                                 {type.type.name}
@@ -62,16 +59,16 @@ function Search(){
                             )   
                         })
                     }
-                    {pokeData.stats ?<p>{pokeData.stats[0].stat.name}: {pokeData.stats[0].base_stat}</p> : null}
-                    {pokeData.stats ?<p>{pokeData.stats[1].stat.name}: {pokeData.stats[1].base_stat}</p> : null}
-                    {pokeData.stats ?<p>{pokeData.stats[2].stat.name}: {pokeData.stats[2].base_stat}</p> : null}
-                    {pokeData.stats ?<p>{pokeData.stats[3].stat.name}: {pokeData.stats[3].base_stat}</p> : null}
-                    {pokeData.stats ?<p>{pokeData.stats[4].stat.name}: {pokeData.stats[4].base_stat}</p> : null}
-                    {pokeData.stats ?<p>{pokeData.stats[5].stat.name}: {pokeData.stats[5].base_stat}</p> : null}
-                    {pokeData.weight ? <p>Weight: {pokeData.weight}</p> : null}
-                    {pokeData.height ? <p>Height: {pokeData.height}</p> : null}
-                    {pokeData.abilities ? <p>Ability: {pokeData.abilities[0].ability.name}</p> : null}
-                    {pokeData.name ? <button>POKEBUY</button> : null}
+                    {poke__Data.stats ?<p>{poke__Data.stats[0].stat.name}: {poke__Data.stats[0].base_stat}</p> : null}
+                    {poke__Data.stats ?<p>{poke__Data.stats[1].stat.name}: {poke__Data.stats[1].base_stat}</p> : null}
+                    {poke__Data.stats ?<p>{poke__Data.stats[2].stat.name}: {poke__Data.stats[2].base_stat}</p> : null}
+                    {poke__Data.stats ?<p>{poke__Data.stats[3].stat.name}: {poke__Data.stats[3].base_stat}</p> : null}
+                    {poke__Data.stats ?<p>{poke__Data.stats[4].stat.name}: {poke__Data.stats[4].base_stat}</p> : null}
+                    {poke__Data.stats ?<p>{poke__Data.stats[5].stat.name}: {poke__Data.stats[5].base_stat}</p> : null}
+                    {poke__Data.weight ? <p>Weight: {poke__Data.weight}</p> : null}
+                    {poke__Data.height ? <p>Height: {poke__Data.height}</p> : null}
+                    {poke__Data.abilities ? <p>Ability: {poke__Data.abilities[0].ability.name}</p> : null}
+                    {poke__Data.name ? <button onClick={()=> handleClickSearch(poke__Data)}>POKEBUY</button> : null}
                 </div>
             </div> : null}
         </section>

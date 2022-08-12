@@ -1,0 +1,104 @@
+.nav-bar {
+    background: #2a75bb;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    z-index: 3;
+    min-height: 60px;
+
+    nav{
+      display: block;
+      text-align: center;
+      width: 100%;
+      #home-link{
+        padding-right: 25px;
+        font-size: 35px;
+
+      }
+      #search-link{
+        padding-right: 25px;
+        font-size: 35px;
+      }
+      #cart-link{
+        padding-right: 25px;
+        font-size: 35px;
+      }
+
+
+
+    }
+
+}
+
+
+.container.home-page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    .banner{
+        border: solid black;
+        border-width: 10px;
+        padding: 75px;
+        text-align: center;
+        background: white;
+        color: red;
+        font-size: 30px;
+        width: 100%;
+        //background-image: url("pokeBanner.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position:center ;
+
+
+    }
+    .title{
+        font-size: 38PX;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        width: 100%;
+        color: black;
+    }
+    .featured-pokemon{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        color: black;
+        margin:50px auto;
+        max-width: 2000px;
+        .pokemon{
+            box-shadow: 3px 6px rgba(0,0,0,0.2);
+            background-color: #ffcb05;
+            border: solid black;
+            padding: 50px;
+            border-radius: 50px;
+            min-width: 8rem;
+            margin: 5px;
+            color: black;
+        }
+    }
+
+}
+@media screen and (min-width: 601px){
+    .container.home-page{
+        .banner{
+
+            //background-image: url("pokebanner3.png");
+        }
+    }
+    
+}
