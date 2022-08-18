@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import Card from './components/Card'
 import Search from './components/Search';
 import Cart from './components/Cart';
@@ -29,6 +29,8 @@ function App() {
   const [showCart, setShowCart] = useState(false)
   const [showHome, setShowHome] = useState(true)
   const [cart, setCart] = useState([]); 
+  //const [price,setPrice] = useState(0);
+  const PokePrice = 100;
   const url = 'https://pokeapi.co/api/v2/pokemon'
   useEffect(() => {
       async function fetchData() {
@@ -67,13 +69,22 @@ function App() {
     //console.log(showCart)
   }
  
-  const handleClick = (pokemon) => {
-      setCart([...cart, pokemon]);
+  const handleClick = (pokemon) => {      
+      const AddtoCart = cart.filter((cart)=>cart.id !== pokemon.id);
+      setCart([...AddtoCart, pokemon]);
+      //let addPrice = price + PokePrice;
+      //setPrice(addPrice);
+      //console.log(price)
+      //const btn = document.getElementById(pokemon.id)
+      //btn.style.display='none'
+      //btn.innerHTML="Out of Stock"
   };
   //console.log(cart)
   const handleClickSearch = (poke__Data) => {
-    setCart([...cart, poke__Data]);
-    console.log(cart)
+    const AddtoCart = cart.filter((cart)=>cart.id !== poke__Data.id);
+    setCart([...AddtoCart, poke__Data]);
+    //const addPrice = price + PokePrice;
+    //setPrice(addPrice);
 };
   return (
     <>
@@ -94,7 +105,6 @@ function App() {
     {showHome && <section class="container home-page">
             <div class="banner">
                 <h1>Poke Shop</h1>
-                <p>Under Development</p>
             </div>
             <h1 class="title">FEATURED POKEMON</h1>
              <div className="featured-pokemon">
@@ -104,7 +114,7 @@ function App() {
             </div>
     </section>}
     {showSearch && <Search handleClickSearch={handleClickSearch}/>}
-    {showCart &&  <Cart cart={cart}/>}
+    {showCart &&  <Cart cart={cart} setCart={setCart} PokePrice={PokePrice}/>}
 
   </>
   )

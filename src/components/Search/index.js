@@ -6,14 +6,13 @@ import axios from 'axios'
 
 function Search({handleClickSearch}){
     const[poke__Data,setData] = useState([])
-    const[pokemon,setPokemon] = useState('')
+    const[pokemon,setPokemon] = useState('chimchar')
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
     
     const searchPokemon = () =>{
         axios.get(url).then((response) => {
             setData(response.data)
-            //console.log(response.data)
-          })
+        })
           setPokemon('')
     }
     const typeColors = {
