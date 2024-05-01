@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wesley-pokeshop/static/css/main.182258af.css",
-    "main.js": "/wesley-pokeshop/static/js/main.bba05cf0.js",
+    "main.js": "/wesley-pokeshop/static/js/main.e1308789.js",
     "static/js/787.68221884.chunk.js": "/wesley-pokeshop/static/js/787.68221884.chunk.js",
     "static/media/featurepokemonmobile.png": "/wesley-pokeshop/static/media/featurepokemonmobile.26a540e65216268e1420.png",
     "static/media/pokeshopbannermobile.png": "/wesley-pokeshop/static/media/pokeshopbannermobile.941dd58215fa4bba4a16.png",
@@ -11,11 +11,11 @@
     "static/media/PokemonBannerUnder.png": "/wesley-pokeshop/static/media/PokemonBannerUnder.61339690a399fba88fe0.png",
     "index.html": "/wesley-pokeshop/index.html",
     "main.182258af.css.map": "/wesley-pokeshop/static/css/main.182258af.css.map",
-    "main.bba05cf0.js.map": "/wesley-pokeshop/static/js/main.bba05cf0.js.map",
+    "main.e1308789.js.map": "/wesley-pokeshop/static/js/main.e1308789.js.map",
     "787.68221884.chunk.js.map": "/wesley-pokeshop/static/js/787.68221884.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.182258af.css",
-    "static/js/main.bba05cf0.js"
+    "static/js/main.e1308789.js"
   ]
 }
