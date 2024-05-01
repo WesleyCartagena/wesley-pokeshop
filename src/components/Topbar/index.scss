@@ -29,8 +29,9 @@
 .navbar-middle-item-text:hover {
   color: whitesmoke !important;
 }
-.navbar-middle-item-text.active {
-  color: #FFCC00 !important;
+#home-link:hover {
+  color: #FFCC00 !important; /* Change text color on hover */
+  text-decoration: underline; /* Add underline on hover */
 }
 #search{
   font-size: 35px;

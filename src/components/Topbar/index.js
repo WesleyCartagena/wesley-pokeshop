@@ -44,12 +44,12 @@ const Topbar = () => {
               <Nav className='navbar-middle justify-content-end'>
                 <Nav.Item className='navbar-middle-item pt-2'>
                     <LinkContainer to="search">
-                        <Nav.Link className='text-decoration-none navbar-middle-item-text' id="search-link" eventKey="search">Search</Nav.Link>
+                        <Nav.Link className='text-decoration-none navbar-middle-item-text' id="search-mobile" eventKey="search">Search</Nav.Link>
                     </LinkContainer>
                 </Nav.Item>
                 <Nav.Item className='navbar-middle-item pt-3'>
                     <LinkContainer to="cart">
-                        <Nav.Link className='text-decoration-none navbar-middle-item-text' id="cart-link" eventKey="cart">Cart</Nav.Link>
+                        <Nav.Link className='text-decoration-none navbar-middle-item-text' id="cart-mobile" eventKey="cart" style={{hover:'yellow'}}>Cart</Nav.Link>
                     </LinkContainer>
                 </Nav.Item>
               </Nav>
