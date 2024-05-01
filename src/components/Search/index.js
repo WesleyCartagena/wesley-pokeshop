@@ -128,7 +128,7 @@ const Search = ({ cart, setCart }) => {
                             {poke__Data.price ?<ListGroup.Item className='card-list-item font-weight-bold' key={9}>Price: <span className="text-danger">${poke__Data.price}</span></ListGroup.Item>: null}
                             </ListGroup>
                         </Card.Body>
-                        {poke__Data.name ?  <Button className='search-card-button' variant="primary" id={pokemon.id} onClick={handleAddToCart} >PokeBuy</Button>: null}
+                        {poke__Data.name ?  <Button className='search-card-button' variant="primary" id={pokemon.id} onClick={handleAddToCart} >Add to Cart</Button>: null}
                     </Card>
             </div> : null}
         </div>
