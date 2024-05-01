@@ -1,63 +1,66 @@
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX } from '@fortawesome/free-solid-svg-icons'
-import React, {useState} from 'react';
+import React from 'react';
 
-function Cart({cart,setCart,PokePrice,price,setPrice}){
-  //console.log(cart)
-  //console.log(cart[0].name)
-  //const [pokemonInCart,setPokemonInCart] = useState(cart);
-  //const nothing = []
+
+const Cart = ({ cart, setCart }) => {
   const remove_pokemon = (id) =>{
     const updateCart = cart.filter((cart)=>cart.id !== id);
     setCart(updateCart)
-    //let minusPrice = price - PokePrice;
-    //setPrice(minusPrice);
+};
+
+  const handleChangeQuantity = (id, newQuantity) => {
+    const updatedCart = cart.map((cart) =>
+      cart.id === id ? { ...cart, quantity: newQuantity } : cart
+    );
+    setCart(updatedCart);
   };
-  var totalPrice = 0; 
+  
+  let totalPrice = 0;
   for (let i = 0; i < cart.length; i++) {
-    totalPrice = totalPrice + 100;
+    totalPrice += cart[i].price * cart[i].quantity;
   }
     return(
        <>
-         {cart ?   <section class="container cart-page">
-                        <div class="shopping-cart">
-                            <div class="cart_title">CART PAGE</div>
+         {cart ?   <div className="container cart-page">
+                        <div className="shopping-cart">
+                            <div className="cart_title">CART PAGE</div>
                             <div>
-                            <div class="labels">
-                            <span class="title_quantity">Quantity</span>
-                            <span class="title_price">Price</span>
+                            <div className="labels">
+                            <span className="title_quantity">Quantity</span>
+                            <span className="title_price">Price</span>
                             </div>
                             </div>
                             {cart.map((cart)=>{
-                                return <div key={cart.id} class="cart_item">
-                                            <div class="buttons">
-                                                <button class="delete-btn" onClick={()=> remove_pokemon(cart.id)}> 
+                                return <div key={cart.id} className="cart_item">
+                                            <div className="buttons">
+                                                <button className="delete-btn" onClick={()=> remove_pokemon(cart.id)}> 
                                                     <FontAwesomeIcon icon={faX} color="#4d4d4e"/> 
                                                 </button>
                                             </div>
-                                            <div class="cart_image">
+                                            <div className="cart_image">
                                                 <img className="inside_img" src={cart.sprites.front_default} alt=""></img>
                                             </div>
-                                            <div class="description">
+                                            <div className="description">
                                                 <span>{cart.name}</span> 
                                                 <span>{cart.abilities[0].ability.name}</span>
                                             </div>
-                                            <div class="quantity">
-                                                <button  class="plus-btn" type="button" name="button">+</button>
-                                                <input type="text" name="name" value="1"/>
-                                                <button  class="minus-btn" type="button" name="button">-</button>
+                                            <div className="quantity">
+                                                <button  className="plus-btn" type="button" name="button" onClick={() => handleChangeQuantity(cart.id, cart.quantity + 1)}>+</button>
+                                                <input type="text" name="name" value={cart.quantity} onChange={(e) =>handleChangeQuantity(cart.id, parseInt(e.target.value))}/>
+                                                <button  className="minus-btn" type="button" name="button" onClick={() =>handleChangeQuantity(cart.id,Math.max(1, cart.quantity - 1) )}>-</button>
                                             </div>
-                                            <div class="poke-price">${PokePrice}</div>
+                                            <div class="poke-price">${cart.price * cart.quantity}</div>
                                         </div>
                             })}
-                            <div class="total-price">
+                            <div className="total-price">
                             <span>TOTAL PRICE:$</span>
                             <span >{totalPrice}</span>
                             </div>
                             
                         </div>
-                    </section>:null}
+                    </div>:null}
                     
 
         </>
