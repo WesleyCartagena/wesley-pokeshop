@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/wesley-pokeshop/static/css/main.ce3743b8.css",
-    "main.js": "/wesley-pokeshop/static/js/main.fead5a1a.js",
+    "main.css": "/wesley-pokeshop/static/css/main.74b1c2fd.css",
+    "main.js": "/wesley-pokeshop/static/js/main.0a0a831e.js",
     "static/js/787.68221884.chunk.js": "/wesley-pokeshop/static/js/787.68221884.chunk.js",
-    "static/media/PokeBanner.png": "/wesley-pokeshop/static/media/PokeBanner.95d174377a2f0a71d69e.png",
+    "static/media/featurepokemonmobile.png": "/wesley-pokeshop/static/media/featurepokemonmobile.26a540e65216268e1420.png",
+    "static/media/pokeshopbannermobile.png": "/wesley-pokeshop/static/media/pokeshopbannermobile.941dd58215fa4bba4a16.png",
+    "static/media/featurepokemon.png": "/wesley-pokeshop/static/media/featurepokemon.896c46a02dadf0e06bf2.png",
+    "static/media/pokeshopbanner.png": "/wesley-pokeshop/static/media/pokeshopbanner.d4e572d8712472d2a5a2.png",
+    "static/media/logo512.png": "/wesley-pokeshop/static/media/logo512.134d6166c239afc1ff88.png",
+    "static/media/PokemonBannerUnder.png": "/wesley-pokeshop/static/media/PokemonBannerUnder.61339690a399fba88fe0.png",
     "index.html": "/wesley-pokeshop/index.html",
-    "main.ce3743b8.css.map": "/wesley-pokeshop/static/css/main.ce3743b8.css.map",
-    "main.fead5a1a.js.map": "/wesley-pokeshop/static/js/main.fead5a1a.js.map",
+    "main.74b1c2fd.css.map": "/wesley-pokeshop/static/css/main.74b1c2fd.css.map",
+    "main.0a0a831e.js.map": "/wesley-pokeshop/static/js/main.0a0a831e.js.map",
     "787.68221884.chunk.js.map": "/wesley-pokeshop/static/js/787.68221884.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce3743b8.css",
-    "static/js/main.fead5a1a.js"
+    "static/css/main.74b1c2fd.css",
+    "static/js/main.0a0a831e.js"
   ]
 }
