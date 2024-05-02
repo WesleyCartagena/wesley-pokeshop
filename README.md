@@ -85,15 +85,12 @@ I'll show you how to get started
 
  Make sure Node.js is installed on your machine
 - [Node](https://nodejs.org/en)
-This is an example of how to list things you need to use the software and how to install them.
 
 - npm
   ```sh
   npm install npm@latest -g
   ```
  ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Clone the repo
    ```sh
